@@ -1,4 +1,4 @@
-package methods
+package singlylinkedlists
 
 func (list *List) DeleteFront() {
 	current := list.Next

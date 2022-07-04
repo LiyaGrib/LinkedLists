@@ -1,12 +1,13 @@
-package methods
+package doublylinkedlists
 
 type (
 	Element struct {
 		Body any
 		Next *Element
+		Prev *Element
 	}
 
-	List struct {
+	Head struct {
 		Len  uint
 		Next *Element
 	}

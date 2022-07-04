@@ -1,4 +1,4 @@
-package methods
+package singlylinkedlists
 
 func (list *List) InsertFront(body any) {
 	el := Element{

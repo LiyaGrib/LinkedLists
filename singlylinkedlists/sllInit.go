@@ -1,4 +1,4 @@
-package methods
+package singlylinkedlists
 
 func ListInit() (l *List) {
 	l = new(List)

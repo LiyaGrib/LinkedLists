@@ -1,22 +1,37 @@
 package main
 
 import (
-	"singlyLinkedLists/methods"
+	// "linkedLists/singlylinkedlists"
+	"linkedLists/doublylinkedlists"
 	"log"
 )
 
 func main() {
-	list := methods.ListInit()
+	list := doublylinkedlists.InitDoublyList()
+	list.InsertFront("asdasd")	
 	list.InsertFront("First")
-	list.InsertBack("Second")
-	list.InsertBack("pupa")
 	list.Display()
-	log.Println("----------------------------")
+	log.Println("------------")
 
-	data, err := list.GetBody(5)
-	if err != nil {
-		log.Println(err)
-	} else {
-		log.Println(*data)
-	}
+
+	str := "hehe"
+	list.InsertBack(str)
+	list.Display()
+	
+
+
+
+	// list := singlylinkedlists.ListInit()
+	// list.InsertFront("First")
+	// list.InsertBack("Second")
+	// list.InsertBack("pupa")
+	// list.Display()
+	// log.Println("----------------------------")
+
+	// data, err := list.GetBody(5)
+	// if err != nil {
+	// 	log.Println(err)
+	// } else {
+	// 	log.Println(*data)
+	// }
 }
