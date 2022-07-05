@@ -3,17 +3,17 @@ package singlylinkedlists
 import "log"
 
 func (list *List) Display() {
-	if list.Next == nil {
+	if list.head == nil {
 		return
 	}
-	current := list.Next
+	current := list.head
 
 	for {
 		log.Println(current.Body)
-		if current.Next == nil {
+		if current.next == nil {
 			break
 		}
 
-		current = current.Next
+		current = current.next
 	}
 }

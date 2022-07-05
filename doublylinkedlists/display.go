@@ -2,18 +2,18 @@ package doublylinkedlists
 
 import "log"
 
-func (head *Head) Display() {
-	if head.Next == nil {
+func (list *List) Display() {
+	if list.head == nil {
 		return
 	}
-	current := head.Next
+	current := list.head
 
 	for {
 		log.Println(current.Body)
-		if current.Next == nil {
+		if current.next == nil {
 			break
 		}
 
-		current = current.Next
+		current = current.next
 	}
 }

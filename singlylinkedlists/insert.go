@@ -1,26 +1,26 @@
 package singlylinkedlists
 
 func (list *List) InsertFront(body any) {
-	el := Element{
+	node := Node{
 		Body: body,
-		Next: list.Next,
+		next: list.head,
 	}
-	list.Next = &el
+	list.head = &node
 
-	list.Len++
+	list.len++
 }
 
 func (list *List) InsertBack(body any) {
-	el := Element{
+	node := Node{
 		Body: body,
 	}
-	current := list.Next
+	current := list.head
 
-	for current.Next != nil {
-		current = current.Next
+	for current.next != nil {
+		current = current.next
 	}
 
-	current.Next = &el
+	current.next = &node
 
-	list.Len++
+	list.len++
 }

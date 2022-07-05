@@ -1,24 +1,24 @@
 package singlylinkedlists
 
 func (list *List) DeleteFront() {
-	current := list.Next
-	list.Next = current.Next
+	current := list.head
+	list.head = current.next
 
-	list.Len--
+	list.len--
 }
 
 func (list *List) DeleteBack() {
-	current := list.Next
-	post := current.Next
+	current := list.head
+	post := current.next
 
-	for current.Next != nil {
-		current = current.Next
-		post = post.Next
-		if post.Next == nil {
-			current.Next = nil
+	for current.next != nil {
+		current = current.next
+		post = post.next
+		if post.next == nil {
+			current.next = nil
 			break
 		}
 	}
 
-	list.Len--
+	list.len--
 }

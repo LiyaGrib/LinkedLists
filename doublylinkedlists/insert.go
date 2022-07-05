@@ -1,40 +1,58 @@
 package doublylinkedlists
 
-func (head *Head) InsertFront(body any) {
-	el := Element{
+func (list *List) InsertFront(body any) {
+	node := Node{
 		Body: body,
 	}
 
-	if head.Next == nil {
-		head.Next = &el
+	if list.head == nil {
+		list.head = &node
+		list.last = &node
 	} else {
-		current := head.Next
-		current.Prev = &el
+		current := list.head
+		current.prev = &node
 
-		el.Next = current
-		head.Next = &el
+		node.next = current
+		list.head = &node
 	}
 
-	head.Len++
+	list.len++
 }
 
-func (head *Head) InsertBack(body any) {
-	el := Element {
+func (list *List) InsertFrontEl(node *Node) {
+	if list.head == nil {
+		list.head = node
+	} else {
+		current := list.head
+		current.prev = node
+
+		node.next = current
+		list.head = node
+	}
+
+	list.len++
+}
+
+func (list *List) InsertBack(body any) {
+	node := Node{
 		Body: body,
 	}
 
-	if head.Next == nil {
-		head.Next = &el
+	if list.head == nil {
+		list.head = &node
+		list.last = &node
 	} else {
-		current := head.Next
+		current := list.head
 		for {
-			if current.Next == nil {
-				current.Next = &el
-				el.Prev = current
+			if current.next == nil {
+				current.next = &node
+				node.prev = current
 				break
 			}
 
-			current = current.Next
+			current = current.next
 		}
 	}
+
+	list.len++
 }

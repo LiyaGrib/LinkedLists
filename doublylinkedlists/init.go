@@ -1,6 +1,6 @@
 package doublylinkedlists
 
-func InitDoublyList() *Head {
-	h := new(Head)
-	return h
+func InitDoublyList() *List {
+	l := new(List)
+	return l
 }

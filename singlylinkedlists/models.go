@@ -1,13 +1,13 @@
 package singlylinkedlists
 
 type (
-	Element struct {
+	Node struct {
 		Body any
-		Next *Element
+		next *Node
 	}
 
 	List struct {
-		Len  uint
-		Next *Element
+		len  uint
+		head *Node
 	}
 )

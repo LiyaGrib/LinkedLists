@@ -1,4 +1,4 @@
-package singlylinkedlists
+package doublylinkedlists
 
 import "errors"
 

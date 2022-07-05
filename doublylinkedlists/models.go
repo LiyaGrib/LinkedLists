@@ -1,14 +1,15 @@
 package doublylinkedlists
 
 type (
-	Element struct {
+	Node struct {
 		Body any
-		Next *Element
-		Prev *Element
+		next *Node
+		prev *Node
 	}
 
-	Head struct {
-		Len  uint
-		Next *Element
+	List struct {
+		len  uint
+		head *Node
+		last *Node
 	}
 )
