@@ -2,22 +2,42 @@ package main
 
 import (
 	"log"
-	// "linkedLists/singlylinkedlists"
-	"linkedLists/doublylinkedlists"
+
+	"linkedLists/singlylinkedlists"
+	// "linkedLists/doublylinkedlists"
 )
 
 func main() {
-	list := doublylinkedlists.InitDoublyList()
-
-	list.InsertFront("asdasd4")
-	list.InsertFront("asdasd3")
-	list.InsertFront("asdasd2")
-	list.InsertFront("asdasd1")
+	list := singlylinkedlists.ListInit()
+	list.InsertFront("A1")
+	list.InsertBack("A2")
+	list.InsertBack("A3")
+	list.InsertBack("A4")
 	list.Display()
-	log.Println("------------")
+	log.Println("----------------------------")
 
-	list.InsertAny("test", 2)
+	list.DeleteAny(4)
 	list.Display()
+	log.Println("----------------------------")
+
+	// data, err := list.GetBody(3)
+	// if err != nil {
+	// 	log.Println(err)
+	// } else {
+	// 	log.Println(*data)
+	// }
+
+	// list := doublylinkedlists.InitDoublyList()
+
+	// list.InsertFront("asdasd4")
+	// list.InsertFront("asdasd3")
+	// list.InsertFront("asdasd2")
+	// list.InsertFront("asdasd1")
+	// list.Display()
+	// log.Println("------------")
+
+	// list.InsertAny("test", 2)
+	// list.Display()
 	// log.Println("------------")
 	// list.InsertBack("pupa")
 	// list.Display()
@@ -34,17 +54,4 @@ func main() {
 	// 	list.InsertFrontElements(&el)
 	// }
 	// list.Display()
-
-	// list := singlylinkedlists.ListInit()
-	// list.InsertFront("First")
-	// list.InsertBack("Second")
-	// list.Display()
-	// log.Println("----------------------------")
-
-	// data, err := list.GetBody(3)
-	// if err != nil {
-	// 	log.Println(err)
-	// } else {
-	// 	log.Println(*data)
-	// }
 }

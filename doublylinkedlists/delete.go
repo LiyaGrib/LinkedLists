@@ -22,9 +22,9 @@ func (list *List) DeleteBack() {
 	list.len--
 }
 
-func (list *List) DeleteElement(n uint) (err error) {
+func (list *List) DeleteAny(n uint) (err error) {
 	if list.len < n {
-		err = errors.New("{DeleteElement}: n > list.len")
+		err = errors.New("{DeleteAny}: n > list.len")
 		return
 	}
 	current := list.head

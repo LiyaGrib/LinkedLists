@@ -80,7 +80,6 @@ func (list *List) InsertReplace(body any, n uint) (err error) {
 		}
 	}
 
-	list.len++
 	return
 }
 
@@ -89,8 +88,8 @@ func (list *List) InsertAny(body any, n uint) {
 		Body: body,
 	}
 
-	if list.len + 1 < n {
-		log.Println("{InsertAny}: n > list.len + 1 and Denis PiDaRaS")
+	if list.len+1 < n {
+		log.Println("{InsertAny}: n > list.len + 1")
 		return
 	}
 
@@ -116,10 +115,10 @@ func (list *List) InsertAny(body any, n uint) {
 			list.head = node
 		} else {
 
-		node.next = nodeRight
-		nodeRight.prev.next = node
-		node.prev = nodeRight.prev
-		nodeRight.prev = node
+			node.next = nodeRight
+			nodeRight.prev.next = node
+			node.prev = nodeRight.prev
+			nodeRight.prev = node
 		}
 	}
 
