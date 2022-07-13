@@ -15,34 +15,33 @@ func main() {
 	list.InsertFront("asdasd1")
 	list.Display()
 	log.Println("------------")
-	// list.DeleteFront()
-	// list.DeleteBack()
-	err := list.DeleteElement(3)
-	if err != nil {
-		log.Println(err)
-	}
-	list.Display()
 
-	// str := "hehe"
-	// list.InsertBack(str)
+	list.InsertAny("test", 2)
+	list.Display()
+	// log.Println("------------")
+	// list.InsertBack("pupa")
+	// list.Display()
+
+	// err := list.DeleteElements(1)
+	// if err != nil {
+	// }
 	// list.Display()
 
 	// var ss = []string {"asd", "dsa", "qwe"}
-	// for i := 0; i < 3; i++ {
-	// 	el := doublylinkedlists.Element{}
+	// for i := len(ss) - 1; i >= 0; i-- {
+	// 	el := doublylinkedlists.Node{}
 	// 	el.Body = ss[i]
-	// 	list.InsertFrontEl(&el)
+	// 	list.InsertFrontElements(&el)
 	// }
 	// list.Display()
 
 	// list := singlylinkedlists.ListInit()
 	// list.InsertFront("First")
 	// list.InsertBack("Second")
-	// list.InsertBack("pupa")
 	// list.Display()
 	// log.Println("----------------------------")
 
-	// data, err := list.GetBody(5)
+	// data, err := list.GetBody(3)
 	// if err != nil {
 	// 	log.Println(err)
 	// } else {
