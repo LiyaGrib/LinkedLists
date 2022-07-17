@@ -9,12 +9,11 @@ func (list *List) DeleteFront() {
 }
 
 func (list *List) DeleteBack() {
-	current := list.head
-
 	if list.head.next == nil {
 		list.head = nil
 		return
 	}
+	current := list.head
 
 	for current.next.next != nil {
 		current = current.next

@@ -16,7 +16,7 @@ func main() {
 	list.Display()
 	log.Println("----------------------------")
 
-	list.DeleteAny(4)
+	list.InsertAny("kek", 3)
 	list.Display()
 	log.Println("----------------------------")
 
